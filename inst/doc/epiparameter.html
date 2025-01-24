@@ -45,8 +45,9 @@ overflow: visible;
 }
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -57,7 +58,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
 { counter-reset: source-line 0; }
@@ -663,8 +664,8 @@ the <a href="https://epiverse-trace.github.io/epiparameter/articles/data_protoco
 <span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a><span class="fu">quantile</span>(ebola_incubation, <span class="at">p =</span> <span class="fl">0.5</span>)</span>
 <span id="cb9-23"><a href="#cb9-23" tabindex="-1"></a><span class="co">#&gt; [1] 8.224347</span></span>
 <span id="cb9-24"><a href="#cb9-24" tabindex="-1"></a><span class="fu">generate</span>(ebola_incubation, <span class="at">times =</span> <span class="dv">10</span>)</span>
-<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a><span class="co">#&gt;  [1]  9.184342 10.562088  4.997837  1.695285  3.553407  6.656735  6.821006</span></span>
-<span id="cb9-26"><a href="#cb9-26" tabindex="-1"></a><span class="co">#&gt;  [8]  7.451888 15.597509 17.019611</span></span></code></pre></div>
+<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a><span class="co">#&gt;  [1]  6.479617 10.608009 25.839068  4.404971 19.135135  7.710336  5.979506</span></span>
+<span id="cb9-26"><a href="#cb9-26" tabindex="-1"></a><span class="co">#&gt;  [8] 29.933184  1.878894  6.880459</span></span></code></pre></div>
 </details>
 </div>
 <div id="plotting-epidemiological-distributions" class="section level2">

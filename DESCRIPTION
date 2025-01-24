@@ -1,7 +1,7 @@
 Package: epiparameter
 Title: Classes and Helper Functions for Working with Epidemiological
         Parameters
-Version: 0.4.0
+Version: 0.4.1
 Authors@R: c(
     person("Joshua W.", "Lambert", , "joshua.lambert@lshtm.ac.uk", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-5218-3046")),
@@ -46,7 +46,7 @@ Language: en-GB
 LazyData: true
 RoxygenNote: 7.3.2
 NeedsCompilation: no
-Packaged: 2025-01-07 16:58:31 UTC; lshjl15
+Packaged: 2025-01-22 16:23:38 UTC; lshjl15
 Author: Joshua W. Lambert [aut, cre, cph]
     (<https://orcid.org/0000-0001-5218-3046>),
   Adam Kucharski [aut, cph] (<https://orcid.org/0000-0001-8814-9421>),
@@ -59,4 +59,4 @@ Author: Joshua W. Lambert [aut, cre, cph]
   Tim Taylor [rev] (<https://orcid.org/0000-0002-8587-7113>)
 Maintainer: Joshua W. Lambert <joshua.lambert@lshtm.ac.uk>
 Repository: CRAN
-Date/Publication: 2025-01-08 14:50:09 UTC
+Date/Publication: 2025-01-24 06:50:02 UTC

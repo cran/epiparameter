@@ -45,8 +45,9 @@ overflow: visible;
 }
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -57,7 +58,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
 { counter-reset: source-line 0; }
@@ -770,7 +771,7 @@ median and the range of the data. Both of these extractions are implemented in t
 <span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a><span class="co">#&gt; Stochastic numerical optimisation used. </span></span>
 <span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a><span class="co">#&gt; Rerun function multiple times to check global optimum is found</span></span>
 <span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a><span class="co">#&gt;    shape    scale </span></span>
-<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a><span class="co">#&gt; 3.358209 1.284184</span></span></code></pre></div>
+<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a><span class="co">#&gt; 3.358205 1.284190</span></span></code></pre></div>
 </details>
 <p>In the above example we estimate parameters of the gamma distribution, but extraction is also implemented for the lognormal, normal and Weibull distributions, but specifying <code>&quot;lnorm&quot;</code>, <code>&quot;norm&quot;</code> or <code>&quot;weibull&quot;</code>.</p>
 <p>A message is shown when running <code>extract_param()</code> to make the user aware that the estimates are not completely reliable due to the use of numerical optimisation. Rerunning the function to and finding the same parameters are returned indicates that they have successfully converged. This issue is mostly overcome by the internal setup of the <code>extract_param()</code> function which searches for convergence to consistent parameter estimates before returning these to the user.</p>
@@ -785,7 +786,7 @@ median and the range of the data. Both of these extractions are implemented in t
 <span id="cb17-7"><a href="#cb17-7" tabindex="-1"></a><span class="co">#&gt; Stochastic numerical optimisation used. </span></span>
 <span id="cb17-8"><a href="#cb17-8" tabindex="-1"></a><span class="co">#&gt; Rerun function multiple times to check global optimum is found</span></span>
 <span id="cb17-9"><a href="#cb17-9" tabindex="-1"></a><span class="co">#&gt;  meanlog    sdlog </span></span>
-<span id="cb17-10"><a href="#cb17-10" tabindex="-1"></a><span class="co">#&gt; 2.302584 3.737200</span></span></code></pre></div>
+<span id="cb17-10"><a href="#cb17-10" tabindex="-1"></a><span class="co">#&gt; 2.302585 4.132758</span></span></code></pre></div>
 </details>
 <p>In the above section it was mentioned that <code>extract_param()</code> has an internal mechanism to check that the parameters have consistently converged to the same estimates over several optimisation iterations. The tolerance of this convergence and number of times the optimisation can be repeated is specified in the <code>control</code> argument of <code>extract_param()</code>. This is set by default (<code>tolerance = 1e-5</code> and <code>max_iter = 1000</code>), and thus does not need to be specified by the user (as shown in the above examples). In the case that the maximum number of optimisation iterations is reached, the calculation terminates returning the most recent optimisation result to the user along with a warning message.</p>
 <details class="chunk-details" open><summary class="chunk-summary"><span class="chunk-summary-text">Code</span></summary>
